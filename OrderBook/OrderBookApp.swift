@@ -1,10 +1,3 @@
-//
-//  OrderBookApp.swift
-//  OrderBook
-//
-//  Created by Jordan Christensen on 6/30/24.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -12,7 +5,7 @@ import SwiftData
 struct OrderBookApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Book.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
