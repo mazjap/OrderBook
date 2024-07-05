@@ -10,7 +10,7 @@ enum BookInfoError: Error {
     case other(Error)
 }
 
-class BookInfoService {
+final class BookInfoService: Sendable {
     enum BookCoverSize: String {
         case small = "S"
         case medium = "M"
@@ -78,8 +78,10 @@ class BookInfoService {
             let googleResponse = try decoder.decode(GoogleApiBookResponse.self, from: data)
             return googleResponse.items.bookDetails
         } catch {
-            print("Data string where decoding failed:")
-            print(String(data: data, encoding: .utf8) ?? "")
+            #if DEBUG
+                print("Data string where decoding failed:")
+                print(String(data: data, encoding: .utf8) ?? "")
+            #endif
             throw .badDecode(error)
         }
     }

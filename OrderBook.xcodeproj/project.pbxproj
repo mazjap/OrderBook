@@ -23,6 +23,10 @@
 		0E1E3DC52C3374D300826CFD /* GoogleApiBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E3DC42C3374D300826CFD /* GoogleApiBook.swift */; };
 		0E1E3DC72C33751100826CFD /* GoogleApiBookAccessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E3DC62C33751100826CFD /* GoogleApiBookAccessInfo.swift */; };
 		0E1E3DCC2C34C32700826CFD /* BookSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E3DCB2C34C32700826CFD /* BookSearchViewModel.swift */; };
+		0E1E3E062C35C2DA00826CFD /* ToBeRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E3E052C35C2DA00826CFD /* ToBeRead.swift */; };
+		0E1E3E082C35C4E600826CFD /* Color+Mix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E3E072C35C4E600826CFD /* Color+Mix.swift */; };
+		0E1E3E0B2C35E90F00826CFD /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E3E0A2C35E90F00826CFD /* Favorites.swift */; };
+		0E1E3E0D2C367BC000826CFD /* ReadBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E3E0C2C367BC000826CFD /* ReadBooks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +65,12 @@
 		0E1E3DC22C33749900826CFD /* GoogleApiBookSaleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleApiBookSaleInfo.swift; sourceTree = "<group>"; };
 		0E1E3DC42C3374D300826CFD /* GoogleApiBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleApiBook.swift; sourceTree = "<group>"; };
 		0E1E3DC62C33751100826CFD /* GoogleApiBookAccessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleApiBookAccessInfo.swift; sourceTree = "<group>"; };
-		0E1E3DCA2C3384FA00826CFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0E1E3DCA2C3384FA00826CFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E1E3DCB2C34C32700826CFD /* BookSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewModel.swift; sourceTree = "<group>"; };
+		0E1E3E052C35C2DA00826CFD /* ToBeRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToBeRead.swift; sourceTree = "<group>"; };
+		0E1E3E072C35C4E600826CFD /* Color+Mix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Mix.swift"; sourceTree = "<group>"; };
+		0E1E3E0A2C35E90F00826CFD /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		0E1E3E0C2C367BC000826CFD /* ReadBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBooks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,14 +121,11 @@
 		0E1E3D8D2C32610E00826CFD /* OrderBook */ = {
 			isa = PBXGroup;
 			children = (
-				0E1E3DCA2C3384FA00826CFD /* Info.plist */,
-				0E1E3D8E2C32610E00826CFD /* OrderBookApp.swift */,
-				0E1E3D902C32610E00826CFD /* ContentView.swift */,
-				0E1E3DCB2C34C32700826CFD /* BookSearchViewModel.swift */,
-				0E1E3DC02C336AD500826CFD /* BookPreview.swift */,
-				0E1E3DBA2C32611F00826CFD /* BookInfoService.swift */,
+				0E1E3E0F2C36875F00826CFD /* Resources */,
+				0E1E3E0E2C36874700826CFD /* Views */,
+				0E1E3E112C36879400826CFD /* Managers */,
 				0E1E3DC92C33754D00826CFD /* Models */,
-				0E1E3D942C32610F00826CFD /* Assets.xcassets */,
+				0E1E3E092C35C7EE00826CFD /* Extensions */,
 				0E1E3D962C32610F00826CFD /* Preview Content */,
 			);
 			path = OrderBook;
@@ -170,6 +175,53 @@
 				0E1E3D922C32610E00826CFD /* Book.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0E1E3E092C35C7EE00826CFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E3E072C35C4E600826CFD /* Color+Mix.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0E1E3E0E2C36874700826CFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E3D902C32610E00826CFD /* ContentView.swift */,
+				0E1E3E052C35C2DA00826CFD /* ToBeRead.swift */,
+				0E1E3E0C2C367BC000826CFD /* ReadBooks.swift */,
+				0E1E3E0A2C35E90F00826CFD /* Favorites.swift */,
+				0E1E3DC02C336AD500826CFD /* BookPreview.swift */,
+				0E1E3E102C36878800826CFD /* ViewModels */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0E1E3E0F2C36875F00826CFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E3DCA2C3384FA00826CFD /* Info.plist */,
+				0E1E3D8E2C32610E00826CFD /* OrderBookApp.swift */,
+				0E1E3D942C32610F00826CFD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0E1E3E102C36878800826CFD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E3DCB2C34C32700826CFD /* BookSearchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0E1E3E112C36879400826CFD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E3DBA2C32611F00826CFD /* BookInfoService.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +354,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E1E3E0D2C367BC000826CFD /* ReadBooks.swift in Sources */,
+				0E1E3E082C35C4E600826CFD /* Color+Mix.swift in Sources */,
 				0E1E3DC72C33751100826CFD /* GoogleApiBookAccessInfo.swift in Sources */,
 				0E1E3DBD2C3315FD00826CFD /* GoogleApiBookResponse.swift in Sources */,
 				0E1E3DC32C33749900826CFD /* GoogleApiBookSaleInfo.swift in Sources */,
@@ -309,8 +363,10 @@
 				0E1E3D912C32610E00826CFD /* ContentView.swift in Sources */,
 				0E1E3DC52C3374D300826CFD /* GoogleApiBook.swift in Sources */,
 				0E1E3DC12C336AD500826CFD /* BookPreview.swift in Sources */,
+				0E1E3E062C35C2DA00826CFD /* ToBeRead.swift in Sources */,
 				0E1E3D932C32610E00826CFD /* Book.swift in Sources */,
 				0E1E3DCC2C34C32700826CFD /* BookSearchViewModel.swift in Sources */,
+				0E1E3E0B2C35E90F00826CFD /* Favorites.swift in Sources */,
 				0E1E3DBF2C331A5C00826CFD /* GoogleApiBookVolumeInfo.swift in Sources */,
 				0E1E3D8F2C32610E00826CFD /* OrderBookApp.swift in Sources */,
 			);
@@ -479,12 +535,13 @@
 				DEVELOPMENT_TEAM = HFR8F4BT7E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OrderBook/Info.plist;
+				INFOPLIST_FILE = OrderBook/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,12 +566,13 @@
 				DEVELOPMENT_TEAM = HFR8F4BT7E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OrderBook/Info.plist;
+				INFOPLIST_FILE = OrderBook/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

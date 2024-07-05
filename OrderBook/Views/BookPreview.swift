@@ -8,9 +8,13 @@ fileprivate enum ImageProvider {
 
 struct BookPreview: View {
     private let book: BookDetails
+    private let isFavorite: Bool
+    private let rank: UInt?
     
-    init(book: BookDetails) {
+    init(book: BookDetails, isFavorite: Bool = false, rank: UInt? = nil) {
         self.book = book
+        self.isFavorite = isFavorite
+        self.rank = rank
     }
     
     private var imageProvider: ImageProvider {
@@ -65,25 +69,32 @@ struct BookPreview: View {
             .frame(maxWidth: 80, maxHeight: 100)
             
             VStack(alignment: .leading) {
-                Text(book.title)
-                    .font(.title3)
-                    .lineLimit(3)
+                HStack {
+                    Text(book.title)
+                        .font(.title3)
+                        .lineLimit(3)
+                    
+                    Spacer()
+                    
+                    if isFavorite {
+                        Image(systemName: "star.fill")
+                            .font(.headline)
+                    }
+                    
+                    if let rank {
+                        Text("\(rank)")
+                            .font(.title2)
+                    }
+                }
                 
                 Text(book.authors.joined(separator: ", "))
                     .font(.caption)
                     .lineLimit(1)
                 
                 if let desc = book.desc {
-                    let shortDesc = desc.prefix(100)
-                    
-                    Group {
-                        if desc.count > 100 {
-                            Text("\(shortDesc)...")
-                        } else {
-                            Text(shortDesc)
-                        }
-                    }
-                    .font(.caption2)
+                    Text(desc)
+                        .font(.caption2)
+                        .lineLimit(2)
                 }
             }
             .multilineTextAlignment(.leading)
@@ -100,12 +111,15 @@ struct BookPreview: View {
         photoContainer.small = .url(url)
     }
     
-    
-    
-    return BookPreview(book: BookDetails(
-        isbn: "9780553897845",
-        title: "A Game of Thrones",
-        authors: ["George R. R. Martin"],
-        coverPhoto: photoContainer)
+    return BookPreview(
+        book: BookDetails(
+            isbn: "9780553897845",
+            title: "A Game of Thrones",
+            authors: ["George R. R. Martin"],
+            desc: "A really long description of GRRM's `A Game of Thrones`, released in 1997 or smth, to critical acclaim and later adapted to a TV show",
+            coverPhoto: photoContainer
+        ),
+        isFavorite: true,
+        rank: 1
     )
 }
