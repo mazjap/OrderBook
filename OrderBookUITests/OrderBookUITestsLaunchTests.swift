@@ -1,14 +1,6 @@
-//
-//  OrderBookUITestsLaunchTests.swift
-//  OrderBookUITests
-//
-//  Created by Jordan Christensen on 6/30/24.
-//
-
 import XCTest
 
 final class OrderBookUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
