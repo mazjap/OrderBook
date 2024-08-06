@@ -34,7 +34,7 @@ struct ReadBooks: View {
                 ForEach(books) { book in
                     if let details = book.details {
                         NavigationLink {
-                            Text("Item at \(book.dateAdded, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                          Text("I've still got work to do 😬")
                         } label: {
                             BookPreview(book: details, isFavorite: book.isFavorite)
                         }

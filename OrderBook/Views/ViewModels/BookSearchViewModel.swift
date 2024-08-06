@@ -30,6 +30,7 @@ final class BookSearchViewModel {
     
     func queueSearch() {
         guard !searchString.isEmpty else { return }
+        let searchString = searchString
         
         searchTask = Task {
             try? await Task.sleep(for: .milliseconds(200))
@@ -43,7 +44,7 @@ final class BookSearchViewModel {
                     self.searchResults = results
                 }
             } catch {
-                
+                print(error)
             }
         }
     }
